@@ -163,7 +163,7 @@
             //inisialisasi fungsi untuk menghasilkan jawaban permainan
             function getAnswer() {
                 let answer = "123".split("");
-                for(let i = 0; i < answer.length; i++) {
+                for (let i = 0; i < answer.length; i++) {
                     let j = Math.floor(Math.random() * (i + 1));
                     let tmp = answer[i];
                     answer[i] = answer[j];
@@ -207,6 +207,12 @@
                 sessionUserAttempsField.innerText = sessionStorage.getItem(sessionUserAttempsKey);
                 localTotalVictoryField.innerText = localStorage.getItem(localTotalVictoryKey);
                 localMaximumAttempField.innerText = localStorage.getItem(localMaximumAttempsKey);
+            });
+
+            playButton.addEventListener("click", function() {
+                sessionStorage.setItem(sessionAnswerKey, getAnswer());
+                beforeGameDisplay.setAttribute("hidden", true);
+                duringGameDisplay.removeAttribute("hidden");
             });
         </script>
     </body>
