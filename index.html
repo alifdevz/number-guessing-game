@@ -270,6 +270,15 @@
                 sessionStorage.setItem(sessionUserAttempsKey, 0);
                 sessionUserAttempsField.innerText = sessionStorage.getItem(sessionUserAttempsKey);
             });
+
+            destroyDataButton.addEventListener("click", function(){
+                sessionStorage.removeItem(sessionAnswerKey);
+                sessionStorage.removeItem(sessionUserAttempsKey);
+                sessionStorage.removeItem(sessionUserIsPlayingKey);
+                localStorage.removeItem(localTotalVictoryKey);
+                localStorage.removeItem(localMaximumAttempsKey);
+                alert("Mohon me-refresh halaman ini kembali");
+            });
         </script>
     </body>
 </html>
