@@ -214,6 +214,27 @@
                 beforeGameDisplay.setAttribute("hidden", true);
                 duringGameDisplay.removeAttribute("hidden");
             });
+
+            answerButton1.addEventListener("click", function(){
+                sessionUserAnswerField.innerText += "1";
+                if (sessionUserAnswerField.innerText.length == 3){
+                    checkAnswer(sessionUserAnswerField.innerText);
+                }
+            });
+ 
+            answerButton2.addEventListener("click", function(){
+                sessionUserAnswerField.innerText += "2";
+                if (sessionUserAnswerField.innerText.length == 3){
+                    checkAnswer(sessionUserAnswerField.innerText);
+                }
+            });
+            
+            answerButton3.addEventListener("click", function(){
+                sessionUserAnswerField.innerText += "3";
+                if (sessionUserAnswerField.innerText.length == 3){
+                    checkAnswer(sessionUserAnswerField.innerText);
+                }
+            });
         </script>
     </body>
 </html>
